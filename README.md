@@ -1,46 +1,40 @@
 # File Metadata Microservice
 
-This is my File Metadata Microservice Project for freecodecamp.org. I used the provided [boilerplate](https://github.com/freeCodeCamp/boilerplate-project-filemetadata/) to complete this challenge. The test requirements can be found [here](https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/file-metadata-microservice).
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [License](#license)
+This project is a microservice built as part of the freeCodeCamp Back End Development and APIs Certification. It allows users to upload a file and receive information about the file, including its name, type, and size.
 
 ## Installation
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/cnourrcier/fcc-file-metadata-microservice.git
-```
-
-2. Install dependencies:
-
-```bash
-cd fcc-file-metadata-microservice
-npm install
-```
+1. Clone the repository to your local machine.
+2. Install dependencies by running `npm install`.
 
 ## Usage
 
-1. Start the server:
+1. Start the server by running `node server.js`.
+2. Access the application through a web browser.
+3. Navigate to the homepage (`/`) to access the HTML form.
+4. Choose a file to upload and submit the form.
+5. The server will respond with JSON data containing information about the uploaded file, including its name, type, and size.
 
-```bash
-npm run start
-```
+## Endpoints
 
-## API Endpoints
+- `GET /`: Serves the HTML form for uploading files.
+- `POST /api/fileanalyse`: Accepts file uploads and returns JSON data containing information about the uploaded file.
 
-|   Endpoint    |  Description  |
-| ------------- | ------------- |
-| GET / | Serve the HTML form |
-| POST /api/fileanalyse | Upload the file to uploads directory (if directory does not exist, it creates one first) and send the file name, type, and size to client |
+## Dependencies
 
+- `express`: Web framework for Node.js.
+- `cors`: Middleware for enabling Cross-Origin Resource Sharing (CORS).
+- `multer`: Middleware for handling file uploads.
+
+## Configuration
+
+- The server listens on the port specified by the `PORT` environment variable, defaulting to port `3000` if not specified.
+
+## Credits
+
+This project is part of the Back End Development and APIs Certification from [freeCodeCamp](https://www.freecodecamp.org/).
 
 ## License
 
-This project is licensed under the MIT License - see the [MIT License](LICENSE) file for details. 
+This project is licensed under the [BSD 3-Clause License](LICENSE).
 
